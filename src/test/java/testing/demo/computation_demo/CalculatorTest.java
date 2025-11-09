@@ -84,6 +84,15 @@ public class CalculatorTest {
         assertEquals(expected, calc.multiple(value1, value2));
     }
 
+    // New test for normal division
+    @Test
+    @DisplayName("Starting Test #14: divide_normal")
+    @Order(5) // Place after divide_byZero
+    void testDivideNormal() {
+        Calculator calc = new Calculator();
+        assertEquals(50, calc.divide(100, 2)); // Test normal division
+    }
+    
     // Negative test for divide
     @Test
     @DisplayName("Starting Test #13: divide_byZero()")
